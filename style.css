@@ -1,0 +1,228 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* fonts */
+
+/* highlight font */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap'); /* font-family: 'Fraunces', serif; */
+
+/* main font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap'); /* font-family: 'Montserrat', sans-serif; */
+
+/* style */
+
+
+
+/* main */
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  min-height: 100%;
+  font-size: 10px;
+}
+
+/* general */
+
+/* spacing */
+
+.regular-spacing {
+  margin: 0 0 30px 0;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  /* center content */
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 900px) {
+  .product-container {
+    flex-direction: column;
+}
+}
+
+.product-image {
+  background-image: url(images/image-product-desktop.jpg);
+  background-size: cover;
+  width: 37em;
+  height: auto;
+  order: 1;
+  border-radius: 10px 0 0 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  .product-image {
+    width: 37em;
+    height: 25em;
+    background-image: url(images/image-product-mobile.jpg);
+    border-radius: 10px 10px 0 0;
+}
+}
+
+/* product details style */
+
+.product-details-container {
+  width: 37em;
+  order: 2;
+  border-radius: 0 10px 10px 0;
+  background-color: hsl(0, 0%, 100%);
+}
+
+@media only screen and (max-width: 900px) {
+  .product-details-container {
+    border-radius: 0 0 10px 10px;
+}
+}
+
+.product-details {
+  margin: 40px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.6em;
+  letter-spacing: 0.2em;
+  color: hsl(228, 12%, 48%);
+}
+
+.heading {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 4.8em;
+}
+
+@media only screen and (max-width: 900px) {
+  .heading {
+    font-size: 3.8em;
+}
+}
+
+
+
+.product-description {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  letter-spacing: 1.25px;
+  line-height: 1.5;
+  color: hsl(228, 12%, 48%);
+}
+
+/* price */
+
+.price-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  
+}
+
+.new-price {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 5em;
+  color: hsl(158, 36%, 37%);
+}
+
+@media only screen and (max-width: 900px) {
+  .new-price {
+    font-size: 3.2em;
+}
+}
+
+.old-price {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.6em;
+  color: hsl(228, 12%, 48%);
+  margin: 0 0 0 2em;
+}
+@media only screen and (max-width: 900px) {
+  .new-price {
+    font-size: 3.2em;
+}
+  .old-price {
+    font-size: 1.4em;
+  }
+}
+
+
+/* CTA */
+
+.cta {
+  display: flex;
+  background-color: hsl(158, 36%, 37%);
+  justify-content: center;
+  padding: 2em 0;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background-color: hsl(158, 36%, 20%);
+}
+
+.cta img {
+  margin: 0 1em 0 0;
+}
+
+.cta p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.8em;
+  color:hsl(0, 0%, 100%);
+}
+
+
+/* responsive mobile */
+
