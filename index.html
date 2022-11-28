@@ -12,40 +12,62 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center;}
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
+  <main>
 
-  <div class="product-container">
+    <article class="product-card">
 
-    <div class="product-image"></div>
+      <picture class="product-card__image">
+        <source
+        srcset="images/image-product-desktop.jpg 600w,
+                images/image-product-mobile.jpg 686w"
 
-    <div class="product-details-container">
-      <div class="product-details">
-      <h3 class="regular-spacing">PERFUME</h3>
+        sizes="(min-width: 687px) 384px,
+               (max-width: 686px) 384px,
+               100vw">
+        
+        <img src="images/image-product-desktop.jpg" alt="CHANEL Fragrance Paris">
 
-      <h1 class="heading regular-spacing">Gabrielle Essence Eau De Parfum</h1>
+      </picture>
 
-      <p class="product-description regular-spacing">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
-        <div class="price-container regular-spacing">
-          <h2 class="new-price">$149.99</h2>
-          <h4 class="old-price"><s>$169.99</s></h4>
-       </div>  
-      <div class="cta ">
-        <img src="images/icon-cart.svg">
-        <p>Add to Cart</p>
-    </div>
-    </div>
-    </div>
-  </div>
+      
+
+      <div class="product-card__details">
+
+        <h2 class="product-card__details__category">PERFUME</h2>
+        <h1 class="product-card__details__title">Gabrielle Essence Eau De Parfum</h1>
+        <p class="product-card__details__text">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+
+        <span>
+          <span class="product-card__details__price">$149.99&nbsp;</span>
+          <span class="product-card__details__price product-card__details__price--old">$169.99</span>
+        </span>
+        
+        
+
+        <button class="cta"> <img src="images/icon-cart.svg">&nbsp;&nbsp;Add to Cart</button>
+
+      </div>
 
 
+    </article>
+
+  </main>
+
+
+  <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Arsenije Dragic</a>.
     </div>
+  </footer>
+
 
 
 </body>
